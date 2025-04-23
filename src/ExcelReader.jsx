@@ -32,7 +32,10 @@ const ExcelReader = () => {
       <table border="1" style={{ marginTop: "20px", width: "100%", borderCollapse: "collapse" }}>
         <tbody>
           {data.map((row, i) => (
-            <tr key={i}>
+            <tr
+              key={i}
+              style={i === 0 ? { backgroundColor: '#d1e7dd', fontWeight: 'bold' } : {}}
+            >
               {row.map((cell, j) => (
                 <td key={j} style={{ padding: '8px' }}>{cell || ''}</td>
               ))}
